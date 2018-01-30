@@ -5,10 +5,15 @@
 mysql> select * from student;
 
 +----+-------+
+
 | id | name  |
+
 +----+-------+
+
 |  0 | hqq   |
+
 |  1 | hzwww |
+
 +----+-------+
 
 2 rows in set (0.01 sec)
