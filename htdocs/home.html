@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> beego-api服务&前后端分离-实例</title>
+<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div id="app">
+  <p>{{ message }}</p>
+</div>
+
+<script>
+
+  axios.get('http://localhost:8080/v1/student/')
+    .then(function (response) {
+        console.log(response);
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+
+    axios.get('http://localhost:8080/v1/student/?query=Id%3A1')
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+    });
+
+
+   new Vue({
+        el: '#app',
+        data: {
+            message: '前后端分离的例子！前段框架可采用Vue,react,layui等，http REQUEST & RESPONSE可采用axios开元库！后端使用基于Golang的Beego Restful Api．'
+        }
+    })
+
+
+</script>
+</body>
+</html>
