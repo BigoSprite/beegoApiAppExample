@@ -1,7 +1,7 @@
 ## 流程
 
 1. 以MySQL数据库为例，创建api数据库，并创建表student，插入两条数据：
-![](github.com/BigoSprite/beegoApiAppExample/readme-pics/1.png) 
+![](https://github.com/BigoSprite/beegoApiAppExample/readme-pics/1.png) 
 
 2. 根据数据库创建beego api，如下图所示：
 ![](github.com/BigoSprite/beegoApiAppExample/readme-pics/2.png) 
