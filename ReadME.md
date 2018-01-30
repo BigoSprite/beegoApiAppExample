@@ -3,12 +3,14 @@
 1. 以MySQL数据库为例，创建api数据库，并创建表student，插入两条数据：
 
 mysql> select * from student;
+
 +----+-------+
 | id | name  |
 +----+-------+
 |  0 | hqq   |
 |  1 | hzwww |
 +----+-------+
+
 2 rows in set (0.01 sec)
 
 
