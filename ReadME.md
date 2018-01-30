@@ -32,9 +32,11 @@
 5. 数据库增加新的表
 
     5.1 使用如下命令添加新的model和controller：
+
 	    $ bee api beegoApiAppExample -tables="addedTableName" -conn=root:root@tcp\(127.0.0.1:3306\)/api
 	［   注意］不要更新［routers］文件，不然之前的路由全部没了，需要手动添加新表的路由！切记！
 
     5.2 切换到工程目录下，使用如下命令生成新的swagger文档：
+
 	    $ bee run -gendoc=true -downdoc=true 
     执行完毕，即可查看新的swagger文档
