@@ -2,28 +2,28 @@
 
 1. 以MySQL数据库为例，创建api数据库，并创建表student，插入两条数据：
 
-    mysql> select * from student;
+        mysql> select * from student;
 
-    +----+-------+
-    | id | name  |
-    +----+-------+
-    |  0 | hqq   |
-    |  1 | hzwww |
-    +----+-------+
+        +----+-------+
+        | id | name  |
+        +----+-------+
+        |  0 | hqq   |
+        |  1 | hzwww |
+        +----+-------+
 
-    2 rows in set (0.01 sec)
+        2 rows in set (0.01 sec)
 
 
 2. 根据数据库创建beego api．使用命令：
 
-    fm@hzw　~/go/src/github.com/BigoSprite $ bee api beegoApiAppExample -conn=root:root@tcp\(127.0.0.1\)/api
+        fm@hzw　~/go/src/github.com/BigoSprite $ bee api beegoApiAppExample -conn=root:root@tcp\(127.0.0.1\)/api
 
     其中，api为MySQL数据库, root:root分别为数据库的用户名和密码
 
 
 3. 切换到beegoApiAppExample目录，生成swagger文档．使用命令：
 
-    fm@hzw　~/go/src/github.com/BigoSprite $ bee run -gendoc=true -downdoc=true
+        fm@hzw　~/go/src/github.com/BigoSprite $ bee run -gendoc=true -downdoc=true
 
     在浏览器中输入：http://localhost:8080/swagger，即可查看文档．
 
