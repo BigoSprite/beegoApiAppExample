@@ -38,3 +38,29 @@
 
 	    $ bee run -gendoc=true -downdoc=true 
     执行完毕，即可查看新的swagger文档
+
+## AJAX跨域请求
+
+在main.go中添加如下代码：
+
+
+	// ...
+   	//　CORS 跨域请求 参考:https://gocn.io/question/426
+	beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
+		AllowAllOrigins:  true,
+		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+		AllowHeaders:     []string{"Origin", "Authorization", "Access-Control-Allow-Origin", "Access-Control-Allow-Headers", "Content-Type"},
+		ExposeHeaders:    []string{"Content-Length", "Access-Control-Allow-Origin", "Access-Control-Allow-Headers", "Content-Type"},
+		AllowCredentials: true,
+	}))
+	//　beego.Run()
+
+
+
+
+
+
+
+
+
+
