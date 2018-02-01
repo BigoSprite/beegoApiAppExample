@@ -16,7 +16,7 @@
 
         fm@hzw　~/go/src/github.com/BigoSprite $ bee api beegoApiAppExample -conn=root:root@tcp\(127.0.0.1:3306\)/api
 
-    其中，api为MySQL数据库, root:root分别为数据库的用户名和密码
+    其中，api为MySQL数据库名称；127.0.0.1:3306为本机MySQL数据库IP及端口号（`也可以是局域网内的IP和端口号，这样可以使得局域网中的其他成员联合开发`）, root:root分别为数据库的用户名和密码
 
 
 3. 切换到beegoApiAppExample目录，生成swagger文档．使用命令：
@@ -24,6 +24,8 @@
         fm@hzw　~/go/src/github.com/BigoSprite $ bee run -gendoc=true -downdoc=true
 
     在浏览器中输入：http://localhost:8080/swagger，即可查看文档．
+
+	注意：`局域网`中的其他成员（比如前端程序员）可通过访问`yourip:8080/swagger`访问文档，文档提档了Restful api，以此前后端程序员可以根据统一的协议进行前后端通讯，提高开发效率！其中，`yourip`是Linux下使用`ifconfig`命令获得的IP地址．
 
 4. 创建home.html［见beegoApiAppExample/htdocs/home.html］，使用axios作为http请求库．使用浏览器打开，F12查看network中的请求详情页．可得到GET请求返回的数据．
 
