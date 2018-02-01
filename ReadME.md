@@ -30,6 +30,7 @@
 4. 创建home.html［见beegoApiAppExample/htdocs/home.html］，使用axios作为http请求库．使用浏览器打开，F12查看network中的请求详情页．可得到GET请求返回的数据．
 
 5. 根据需求，数据库增加新表时
+
 　　5.0　数据库建立新表
 
     5.1 使用如下命令为beegoApiAppExample添加新表对应的model和controller：
