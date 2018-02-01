@@ -14,7 +14,7 @@
 
 2. 根据数据库创建beego api．使用命令：
 
-        fm@hzw　~/go/src/github.com/BigoSprite $ bee api beegoApiAppExample -conn=root:root@tcp\(127.0.0.1\)/api
+        fm@hzw　~/go/src/github.com/BigoSprite $ bee api beegoApiAppExample -conn=root:root@tcp\(127.0.0.1:3306\)/api
 
     其中，api为MySQL数据库, root:root分别为数据库的用户名和密码
 
