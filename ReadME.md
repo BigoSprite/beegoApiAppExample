@@ -29,9 +29,10 @@
 
 4. 创建home.html［见beegoApiAppExample/htdocs/home.html］，使用axios作为http请求库．使用浏览器打开，F12查看network中的请求详情页．可得到GET请求返回的数据．
 
-5. 数据库增加新的表
+5. 根据需求，数据库增加新表时
+　　5.0　数据库建立新表
 
-    5.1 使用如下命令添加新的model和controller：
+    5.1 使用如下命令为beegoApiAppExample添加新表对应的model和controller：
 
 	    $ bee api beegoApiAppExample -tables="addedTableName" -conn=root:root@tcp\(127.0.0.1:3306\)/api
 	［   注意］不要更新［routers］文件，不然之前的路由全部没了，需要手动添加新表的路由！切记！
@@ -43,7 +44,7 @@
 
 ## AJAX跨域请求
 
-在main.go中添加如下代码：
+跨域请求时前后端分离最常见的问题，beego框架提供了服务．只需在main.go中添加如下代码：
 
 
 	// ...
